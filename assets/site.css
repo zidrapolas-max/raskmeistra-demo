@@ -2499,7 +2499,16 @@ h2 {
   }
 
   .topbar {
-    height: 66px;
+    top: 8px;
+    height: 60px;
+    margin: 8px auto -8px;
+    padding: 0 12px;
+  }
+
+  .topbar:before {
+    border: 1px solid var(--topbar-line);
+    border-radius: 18px;
+    inset: 0;
   }
 
   .brand {
@@ -2507,22 +2516,29 @@ h2 {
   }
 
   .menu-toggle {
-    display: block;
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid var(--topbar-line);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, .05);
   }
 
   .nav {
     z-index: 5;
-    background: var(--brand-2);
+    background: var(--topbar-bg);
     box-shadow: var(--shadow);
-    border: 0;
-    border-radius: 0 0 14px 14px;
+    border: 1px solid var(--topbar-line);
+    border-radius: 16px;
     flex-direction: column;
     align-items: stretch;
-    gap: 17px;
-    padding: 18px;
+    gap: 8px;
+    padding: 12px 14px;
     display: none;
     position: absolute;
-    top: 60px;
+    top: calc(100% + 8px);
     left: 0;
     right: 0;
   }
